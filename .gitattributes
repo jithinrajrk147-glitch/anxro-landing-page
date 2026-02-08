@@ -1,0 +1,10 @@
+# Handle APK files as binary
+*.apk binary
+
+# Handle common file types
+*.html text
+*.css text
+*.js text
+*.md text
+*.xml text
+*.txt text
