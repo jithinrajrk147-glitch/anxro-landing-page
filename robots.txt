@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jithinrajrk147-glitch.github.io/anxro-landing-page/sitemap.xml
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow APK file from being indexed
+User-agent: *
+Disallow: /base.apk
