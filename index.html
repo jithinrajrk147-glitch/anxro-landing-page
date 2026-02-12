@@ -121,6 +121,8 @@
             margin-bottom: 15px;
             transition: all 0.3s ease;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            cursor: pointer;
+            border: none;
         }
 
         .download-btn:hover {
@@ -322,22 +324,17 @@
             <div class="download-section fade-in pulse">
                 <h2>📥 Get the App</h2>
                 
-                <!-- Add your APK download links here -->
-                <a href="#" class="download-btn" id="download-latest">
-                    📱 Download Latest Version
-                </a>
-                
-                <a href="#" class="download-btn" id="download-stable">
-                    ✅ Download Stable Version
-                </a>
-                
-                <a href="#" class="download-btn" id="download-beta">
-                    🚀 Download Beta Version
+                <!-- APK Download Button -->
+                <a href="./base.apk" class="download-btn" download="ANXRO.apk">
+                    📱 Download ANXRO APK
                 </a>
                 
                 <div class="version-info">
                     <p>Latest Version: 1.0.0</p>
-                    <p>Size: ~15 MB | Android 5.0+</p>
+                    <p>File: base.apk | Android 5.0+</p>
+                    <p style="margin-top: 15px; font-size: 0.85rem;">
+                        ⚠️ Enable "Install from Unknown Sources" in your Android settings
+                    </p>
                 </div>
             </div>
         </div>
@@ -399,41 +396,6 @@
     </div>
 
     <script>
-        // Add your APK file URLs here
-        const downloadLinks = {
-            latest: 'YOUR_LATEST_APK_URL_HERE',
-            stable: 'YOUR_STABLE_APK_URL_HERE',
-            beta: 'YOUR_BETA_APK_URL_HERE'
-        };
-
-        // Download button handlers
-        document.getElementById('download-latest').addEventListener('click', function(e) {
-            e.preventDefault();
-            if (downloadLinks.latest !== 'YOUR_LATEST_APK_URL_HERE') {
-                window.location.href = downloadLinks.latest;
-            } else {
-                alert('Please add your APK download link in the code');
-            }
-        });
-
-        document.getElementById('download-stable').addEventListener('click', function(e) {
-            e.preventDefault();
-            if (downloadLinks.stable !== 'YOUR_STABLE_APK_URL_HERE') {
-                window.location.href = downloadLinks.stable;
-            } else {
-                alert('Please add your APK download link in the code');
-            }
-        });
-
-        document.getElementById('download-beta').addEventListener('click', function(e) {
-            e.preventDefault();
-            if (downloadLinks.beta !== 'YOUR_BETA_APK_URL_HERE') {
-                window.location.href = downloadLinks.beta;
-            } else {
-                alert('Please add your APK download link in the code');
-            }
-        });
-
         // Smooth scroll animations
         const observerOptions = {
             threshold: 0.1,
