@@ -44,120 +44,110 @@
        .header .status.online{background:var(--emerald);}
        .header h2{font-family:var(--ff-display);font-size:1.1rem;font-weight:700;}
        .header .code{margin-left:auto;font-size:0.8rem;color:var(--white-muted);}
+       .setup-screen{
+          position:fixed;inset:0;background:var(--bg);z-index:100;
+          display:flex;flex-direction:column;justify-content:center;align-items:center;
+          padding:20px;
+        }
+       .setup-box{
+          width:100%;max-width:360px;background:var(--surface);
+          border:1px solid var(--border);border-radius:20px;padding:32px;
+          text-align:center;
+        }
+       .setup-box h1{font-family:var(--ff-display);font-size:1.8rem;margin-bottom:8px;}
+       .setup-box p{color:var(--white-muted);margin-bottom:24px;font-size:0.9rem;}
+       .setup-box input{
+          width:100%;padding:14px 18px;border-radius:12px;
+          border:1px solid var(--border);background:var(--input-bg);
+          color:var(--white);outline:none;font-size:16px;margin-bottom:16px;
+        }
+       .setup-box input:focus{border-color:var(--emerald);}
+       .setup-box button{
+          width:100%;padding:14px;border-radius:12px;border:none;
+          background:linear-gradient(135deg,var(--emerald),var(--emerald-light));
+          color:var(--bg);font-weight:700;cursor:pointer;font-size:1rem;
+        }
        .connect-box{
-          padding:16px;
-          background:var(--surface);
+          padding:16px;background:var(--surface);
           border-bottom:1px solid var(--border);
-          display:flex;
-          gap:8px;
+          display:flex;gap:8px;
         }
        .connect-box input{
-          flex:1;
-          padding:12px 16px;
-          border-radius:12px;
-          border:1px solid var(--border);
-          background:var(--input-bg);
-          color:var(--white);
-          outline:none;
-          font-size:16px;
+          flex:1;padding:12px 16px;border-radius:12px;
+          border:1px solid var(--border);background:var(--input-bg);
+          color:var(--white);outline:none;font-size:16px;
         }
        .connect-box input:focus{border-color:var(--emerald);}
        .connect-box button{
-          padding:12px 20px;
-          border-radius:12px;
-          border:none;
+          padding:12px 20px;border-radius:12px;border:none;
           background:linear-gradient(135deg,var(--emerald),var(--emerald-light));
-          color:var(--bg);
-          font-weight:700;
-          cursor:pointer;
+          color:var(--bg);font-weight:700;cursor:pointer;
         }
        .chatbox{
-          flex:1;
-          overflow-y:auto;
-          padding:20px;
-          display:flex;
-          flex-direction:column;
-          gap:12px;
+          flex:1;overflow-y:auto;padding:20px;
+          display:flex;flex-direction:column;gap:12px;
         }
        .msg{
-          max-width:75%;
-          padding:12px 16px;
-          border-radius:18px;
-          word-wrap:break-word;
-          animation:msgIn 0.2s ease;
+          max-width:75%;padding:12px 16px;border-radius:18px;
+          word-wrap:break-word;animation:msgIn 0.2s ease;
         }
         @keyframes msgIn{from{opacity:0;transform:translateY(10px)}}
        .msg.me{
           align-self:flex-end;
           background:linear-gradient(135deg,var(--emerald),var(--emerald-light));
-          color:var(--bg);
-          border-bottom-right-radius:4px;
+          color:var(--bg);border-bottom-right-radius:4px;
         }
        .msg.them{
-          align-self:flex-start;
-          background:var(--surface);
-          border:1px solid var(--border);
-          border-bottom-left-radius:4px;
+          align-self:flex-start;background:var(--surface);
+          border:1px solid var(--border);border-bottom-left-radius:4px;
         }
        .msg .pending{font-size:0.7rem;opacity:0.7;margin-left:4px;}
        .input-area{
-          padding:16px;
-          background:var(--surface);
+          padding:16px;background:var(--surface);
           border-top:1px solid var(--border);
-          display:flex;
-          gap:8px;
+          display:flex;gap:8px;
         }
        .input-area input{
-          flex:1;
-          padding:14px 18px;
-          border-radius:16px;
-          border:1px solid var(--border);
-          background:var(--input-bg);
-          color:var(--white);
-          outline:none;
-          font-size:16px;
+          flex:1;padding:14px 18px;border-radius:16px;
+          border:1px solid var(--border);background:var(--input-bg);
+          color:var(--white);outline:none;font-size:16px;
         }
        .input-area input:focus{border-color:var(--emerald);}
        .input-area button{
-          width:50px;
-          height:50px;
-          border-radius:50%;
-          border:none;
+          width:50px;height:50px;border-radius:50%;border:none;
           background:linear-gradient(135deg,var(--emerald),var(--emerald-light));
-          color:var(--bg);
-          font-size:1.2rem;
-          cursor:pointer;
-          display:flex;
-          align-items:center;
-          justify-content:center;
+          color:var(--bg);font-size:1.2rem;cursor:pointer;
+          display:flex;align-items:center;justify-content:center;
         }
        .input-area button:active{transform:scale(0.9);}
        .toast{
-          position:fixed;
-          bottom:90px;
-          left:50%;
-          transform:translateX(-50%);
-          background:var(--surface);
-          padding:12px 20px;
-          border-radius:12px;
-          border:1px solid var(--border);
-          font-size:0.85rem;
-          opacity:0;
-          pointer-events:none;
-          transition:opacity 0.3s;
+          position:fixed;bottom:90px;left:50%;transform:translateX(-50%);
+          background:var(--surface);padding:12px 20px;border-radius:12px;
+          border:1px solid var(--border);font-size:0.85rem;opacity:0;
+          pointer-events:none;transition:opacity 0.3s;z-index:200;
         }
        .toast.show{opacity:1;}
     </style>
 </head>
 <body>
+    <!-- Phone Number Setup - Shows only first time -->
+    <div class="setup-screen" id="setupScreen">
+        <div class="setup-box">
+            <h1>Welcome to Anxro</h1>
+            <p>Enter your phone number to start chatting</p>
+            <input type="tel" id="myPhoneInput" placeholder="+91 98765 43210" inputmode="tel">
+            <button onclick="savePhoneNumber()">Start Chatting</button>
+        </div>
+    </div>
+
     <div class="header">
         <div class="status" id="statusDot"></div>
         <h2 id="friendName">Not Connected</h2>
-        <div class="code">Your ID: <span id="myCode">-----</span></div>
+        <div class="code">You: <span id="myPhone">-----</span></div>
     </div>
 
     <div class="connect-box" id="connectBox">
-        <input type="number" id="friendCode" placeholder="Enter friend's 5-digit code" inputmode="numeric">
+        <input type="tel" id="friendPhone" placeholder="Friend's phone number" inputmode="tel">
         <button onclick="connectToFriend()">Connect</button>
     </div>
 
@@ -172,14 +162,23 @@
 
 <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
 <script>
-    // 1. Get user ID from your auth system
-    const user = JSON.parse(localStorage.getItem('userProfile'));
-    if(!user || !user.userId){
-        alert('Please login first');
-        window.location.href = 'index.html';
+    let myPhone = localStorage.getItem('anxroPhone');
+    let peer, conn, friendPhone;
+
+    // 1. Check if phone already saved
+    if(myPhone){
+        document.getElementById('setupScreen').style.display = 'none';
+        initPeer();
     }
-    const myCode = user.userId;
-    document.getElementById('myCode').innerText = myCode;
+
+    function savePhoneNumber(){
+        const phone = document.getElementById('myPhoneInput').value.replace(/\D/g,''); // Only digits
+        if(phone.length < 10) return showToast('Enter valid phone number');
+        myPhone = phone;
+        localStorage.setItem('anxroPhone', phone);
+        document.getElementById('setupScreen').style.display = 'none';
+        initPeer();
+    }
 
     // 2. Setup IndexedDB for offline queue
     let db;
@@ -190,35 +189,31 @@
         retryQueuedMessages();
     };
 
-    // 3. Setup PeerJS
-    const peer = new Peer(myCode, {
-        debug: 2,
-        config: {'iceServers': [{ urls: 'stun:stun.l.google.com:19302' }]}
-    });
-    let conn = null;
-    let friendCode = null;
+    // 3. Init PeerJS with phone as ID
+    function initPeer(){
+        document.getElementById('myPhone').innerText = myPhone;
+        peer = new Peer(myPhone, {
+            debug: 2,
+            config: {'iceServers': [{ urls: 'stun:stun.l.google.com:19302' }]}
+        });
 
-    peer.on('open', id => {
-        showToast('Ready. Your ID: ' + id);
-    });
+        peer.on('open', id => showToast('Ready'));
+        peer.on('error', err => showToast('Error: ' + err.type));
 
-    peer.on('error', err => {
-        showToast('Error: ' + err.type);
-    });
-
-    // 4. Handle incoming connections
-    peer.on('connection', c => {
-        if(conn && conn.open) c.close(); // Only 1 connection
-        conn = c;
-        friendCode = c.peer;
-        setupConnection();
-    });
+        // Handle incoming connections
+        peer.on('connection', c => {
+            if(conn && conn.open) c.close();
+            conn = c;
+            friendPhone = c.peer;
+            setupConnection();
+        });
+    }
 
     function setupConnection(){
-        document.getElementById('friendName').innerText = 'User ' + friendCode;
+        document.getElementById('friendName').innerText = friendPhone;
         document.getElementById('statusDot').classList.add('online');
         document.getElementById('connectBox').style.display = 'none';
-        showToast('Connected to ' + friendCode);
+        showToast('Connected to ' + friendPhone);
         
         conn.on('data', data => {
             addMessage(data.text, 'them', data.time);
@@ -228,30 +223,32 @@
             document.getElementById('statusDot').classList.remove('online');
             showToast('Disconnected');
             conn = null;
+            document.getElementById('connectBox').style.display = 'flex';
+            document.getElementById('friendName').innerText = 'Not Connected';
         });
 
-        retryQueuedMessages(); // Send backlog
+        retryQueuedMessages();
     }
 
-    // 5. Connect to friend
+    // 4. Connect to friend
     function connectToFriend(){
-        const code = document.getElementById('friendCode').value;
-        if(code.length !== 5) return showToast('Enter 5-digit code');
-        if(code === myCode) return showToast("Can't connect to yourself");
+        const phone = document.getElementById('friendPhone').value.replace(/\D/g,'');
+        if(phone.length < 10) return showToast('Enter valid phone number');
+        if(phone === myPhone) return showToast("Can't connect to yourself");
         
-        friendCode = code;
-        conn = peer.connect(code, {reliable: true});
+        friendPhone = phone;
+        conn = peer.connect(phone, {reliable: true});
         conn.on('open', setupConnection);
-        conn.on('error', () => showToast('Failed to connect'));
+        conn.on('error', () => showToast('User offline or invalid number'));
     }
 
-    // 6. Send message
+    // 5. Send message
     function sendMessage(){
         const input = document.getElementById('msgInput');
         const text = input.value.trim();
-        if(!text || !friendCode) return;
+        if(!text || !friendPhone) return;
         
-        const msg = {to: friendCode, text: text, from: myCode, time: Date.now()};
+        const msg = {to: friendPhone, text: text, from: myPhone, time: Date.now()};
         
         if(conn && conn.open){
             conn.send(msg);
@@ -264,20 +261,19 @@
         input.value = '';
     }
 
-    // 7. IndexedDB Queue functions
+    // 6. IndexedDB Queue
     function saveToQueue(msg){
         const tx = db.transaction('messages', 'readwrite');
         tx.objectStore('messages').add(msg);
     }
 
     function retryQueuedMessages(){
-        if(!conn || !conn.open || !db || !friendCode) return;
-        
+        if(!conn || !conn.open || !db || !friendPhone) return;
         const tx = db.transaction('messages', 'readwrite');
         const store = tx.objectStore('messages');
         store.getAll().onsuccess = e => {
             e.target.result.forEach(msg => {
-                if(msg.to === friendCode){
+                if(msg.to === friendPhone){
                     conn.send(msg);
                     store.delete(msg.id);
                     updateMessageStatus(msg.time);
@@ -286,7 +282,7 @@
         };
     }
 
-    // 8. UI functions
+    // 7. UI functions
     function addMessage(text, who, time, pending=false){
         const div = document.createElement('div');
         div.className = 'msg ' + who;
@@ -308,17 +304,10 @@
         setTimeout(() => t.classList.remove('show'), 2000);
     }
 
-    // 9. Retry every 30s while app open
+    // 8. Retry every 30s while app open
     setInterval(() => {
         if(document.visibilityState === 'visible') retryQueuedMessages();
     }, 30000);
-
-    // 10. Reconnect on tab focus
-    document.addEventListener('visibilitychange', () => {
-        if(document.visibilityState === 'visible' && friendCode && (!conn || !conn.open)){
-            connectToFriend(friendCode);
-        }
-    });
 </script>
 </body>
 </html>
